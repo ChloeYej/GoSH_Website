@@ -11,6 +11,13 @@ SALT_ROUNDS = 12
 # Flask 直接托管前端静态资源（/index.html、/dining.html、/js/*、/css/* 等）
 app = Flask(__name__, static_folder=str(STATIC_ROOT), static_url_path="")
 
+@app.after_request
+def add_cors_headers(resp):
+    resp.headers["Access-Control-Allow-Origin"] = "*"
+    resp.headers["Access-Control-Allow-Headers"] = "Content-Type"
+    resp.headers["Access-Control-Allow-Methods"] = "GET,POST,DELETE,OPTIONS"
+    return resp
+
 # ========== DB 连接管理（每次请求 1 个连接） ==========
 def get_db() -> sqlite3.Connection:
     if "db" not in g:
@@ -144,11 +151,10 @@ def remove_favorite():
         (username, type_, title),
     )
     get_db().commit()
-    # 204 表示删除成功且无响应体；若想告诉是否删除到可返回 ok 和 deleted
     if cur.rowcount:
-        return ("", 204)
+        return jsonify(ok=True, deleted=True)
     return json_error("not found", 404)
 
 if __name__ == "__main__":
     # 监听 0.0.0.0 方便局域网访问；开发环境关闭 reloader 可减少 sqlite 频繁 reopen
-    app.run(host="0.0.0.0", port=5000, use_reloader=False)
+    app.run(host="0.0.0.0", port=int(os.getenv("PORT", "5000")), use_reloader=False)

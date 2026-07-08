@@ -8,7 +8,7 @@ window.addEventListener("load", function () {
 
 
 async function postJSON(path, payload, method = "POST") {
-  const resp = await fetch(path, {
+  const resp = await fetch(window.apiUrl(path), {
     method,
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload || {}),
@@ -105,7 +105,7 @@ async function markStarsFromFavorites() {
   let favs = [];
   try {
     const resp = await fetch(
-      `/api/favorites?username=${encodeURIComponent(username)}&type=food`
+      window.apiUrl(`/api/favorites?username=${encodeURIComponent(username)}&type=food`)
     );
     const data = await resp.json();
     if (resp.ok && data && data.ok && Array.isArray(data.items)) favs = data.items;
@@ -178,4 +178,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.toggleStar = toggleStar;
 console.log("[dining.js] loaded");
-

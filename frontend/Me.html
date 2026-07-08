@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Me</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
     <link rel="stylesheet" href="css/me.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lustria&display=swap"
@@ -100,12 +106,14 @@
         <!-- liked food -->
         <section class="liked" id="liked_food">
           <div class="title"><h1>Liked Food</h1></div>
+          <section class="map_panel" id="liked_food_map"></section>
           <section class="cards" id="liked_food_cards"></section>
         </section>
 
         <!-- liked sights -->
         <section class="liked" id="liked_sights" style="display: none">
           <div class="title"><h1>Liked Sights</h1></div>
+          <section class="map_panel" id="liked_sights_map"></section>
           <section class="cards" id="liked_sights_cards"></section>
         </section>
 
@@ -113,7 +121,12 @@
       </section>
     </main>
 
+    <script src="js/api.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <script src="js/me.js?v=20251012"></script>
   </body>
 </html>
-

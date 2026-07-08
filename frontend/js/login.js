@@ -1,5 +1,5 @@
 async function api(path, payload) {
-  const resp = await fetch(path, {
+  const resp = await fetch(window.apiUrl(path), {
     method: "POST",
     headers: {"Content-Type": "application/json"},
     body: JSON.stringify(payload || {})
@@ -17,7 +17,13 @@ async function Login() {
   if (!password) return alert("Please enter your password.");
 
   // 调后端 /api/login
-  const r = await api("/api/login", { username, password });
+  let r;
+  try {
+    r = await api("/api/login", { username, password });
+  } catch (e) {
+    alert("Cannot connect to the backend. Please start Flask on http://127.0.0.1:5000.");
+    return;
+  }
   if (!r.ok) {
     alert((r.data && r.data.msg) || "Login failed");
     return;
@@ -35,7 +41,13 @@ async function SignupFlow() {
   const password = prompt("Create a password:");
   if (!password) return;
 
-  const r = await api("/api/signup", { username, password });
+  let r;
+  try {
+    r = await api("/api/signup", { username, password });
+  } catch (e) {
+    alert("Cannot connect to the backend. Please start Flask on http://127.0.0.1:5000.");
+    return;
+  }
   if (!r.ok) {
     alert((r.data && r.data.msg) || "Sign up failed");
     return;

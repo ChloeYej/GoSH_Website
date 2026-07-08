@@ -3,7 +3,7 @@ window.addEventListener("load", function () {
   const hash = window.location.hash;
   if (hash) {
     const target = document.querySelector(hash);
-    target.classList.add("highlight");
+    if (target) target.classList.add("highlight");
   }
 });
 
@@ -115,7 +115,7 @@ async function toggleStar(element) {
   try {
     if (!filled) {
       // add star
-      const resp = await fetch("/api/favorites", {
+      const resp = await fetch(window.apiUrl("/api/favorites"), {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({ username, type: "sight", title, image, link })
@@ -125,7 +125,7 @@ async function toggleStar(element) {
       img.src = "images/star_filled.png";
     } else {
       // delete star
-      const resp = await fetch("/api/favorites", {
+      const resp = await fetch(window.apiUrl("/api/favorites"), {
         method: "DELETE",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({ username, type: "sight", title })
@@ -147,7 +147,7 @@ async function markStarsFromFavorites() {
 
   let favs = [];
   try {
-    const resp = await fetch(`/api/favorites?username=${encodeURIComponent(username)}&type=sight`);
+    const resp = await fetch(window.apiUrl(`/api/favorites?username=${encodeURIComponent(username)}&type=sight`));
     const data = await resp.json();
     if (resp.ok && data && data.ok && Array.isArray(data.items)) {
       favs = data.items;
