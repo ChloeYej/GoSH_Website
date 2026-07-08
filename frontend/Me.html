@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Me</title>
+    <link rel="stylesheet" href="css/me.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lustria&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <!-- logo -->
+      <a href="homepage.html">
+        <div class="logo">
+          <img src="images/logo.png" alt="logo" />
+        </div>
+      </a>
+      <!-- navigation -->
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="homepage.html"><h5>Home</h5></a>
+          </li>
+          <li>
+            <a href="dining.html"><h5>Dining</h5></a>
+          </li>
+          <li>
+            <a href="sights.html"><h5>Sights</h5></a>
+          </li>
+          <li>
+            <a href="About_us.html"><h5>About</h5></a>
+          </li>
+        </ul>
+      </nav>
+      <!-- user -->
+      <div class="user">
+        <a href="Me.html">
+          <img src="images/user_icon.png" alt="user_icon" />
+        </a>
+      </div>
+    </header>
+
+    <!-- cutting line -->
+    <div class="rec"></div>
+
+    <!-- mainsection -->
+    <main class="mainsection">
+      <!-- left bar -->
+      <section class="left">
+        <div class="me_info">
+          <img src="images/Me/profile_photo.png" alt="profile_photo" />
+          <h2></h2>
+        </div>
+        <div class="buttons">
+          <!-- liked food -->
+          <div class="sub_nav">
+            <button id="food" onclick="ClickLikedFood()">
+              <div class="selected" id="food_display">
+                <img src="images/Me/star_filled.png" alt="star_logo" />
+                <h3>Liked food</h3>
+              </div>
+              <div class="selected" id="food_none" style="display: none">
+                <img src="images/Me/star_logo.png" alt="star_logo" />
+                <h4>Liked food</h4>
+              </div>
+            </button>
+          </div>
+
+          <!-- liked sights -->
+          <div class="sub_nav">
+            <button id="sights" onclick="ClickLikedSight()">
+              <div class="selected" id="sight_display" style="display: none">
+                <img src="images/Me/star_filled.png" alt="star_logo" />
+                <h3>Liked sights</h3>
+              </div>
+              <div class="selected" id="sight_none">
+                <img src="images/Me/star_logo.png" alt="star_logo" />
+                <h4>Liked sights</h4>
+              </div>
+            </button>
+          </div>
+
+          <!-- log out -->
+          <div class="sub_nav">
+            <button onclick="Logout()">
+              <div class="selected">
+                <img src="images/Me/log_out.png" alt="log_out" />
+                <h4>Log out&nbsp;&nbsp;</h4>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- right content -->
+      <section class="right">
+        <!-- liked food -->
+        <section class="liked" id="liked_food">
+          <div class="title"><h1>Liked Food</h1></div>
+          <section class="cards" id="liked_food_cards"></section>
+        </section>
+
+        <!-- liked sights -->
+        <section class="liked" id="liked_sights" style="display: none">
+          <div class="title"><h1>Liked Sights</h1></div>
+          <section class="cards" id="liked_sights_cards"></section>
+        </section>
+
+        <!-- sight section end -->
+      </section>
+    </main>
+
+    <script src="js/me.js?v=20251012"></script>
+  </body>
+</html>
+

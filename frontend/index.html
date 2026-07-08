@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>log in</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lustria&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- picture -->
+    <div class="bg">
+      <img id="pic" src="images/login_pic.jpg" alt="login picture" />
+    </div>
+
+    <!-- main part -->
+    <main class="main">
+      <h1>Welcome to</h1>
+      <h2>Shanghai</h2>
+      <h3>Log in</h3>
+
+      <!-- login form -->
+      <form>
+        <!-- name -->
+        <div class="form">
+          <label for="name"><h5>UserName</h5></label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Email address or user name"
+          />
+        </div>
+        <!-- password -->
+        <div class="form">
+          <label for="password"><h5>PassWord</h5></label>
+          <input type="password" id="password" placeholder="Password" />
+        </div>
+        <!-- checkbox -->
+        <div class="rememberme">
+          <input type="checkbox" checked />
+          <label for="remember"><h5>Remember me</h5></label>
+	</div>
+      </form>
+
+      <!-- login button -->
+      <button class="button" onclick="Login()">Log in</button>
+
+      <!-- other links(remain to be accomplished in the further) -->
+      <footer class="links">
+        
+        <a href="#" id="signup-link"><h4>Don't have an account? Sign up</h4></a>
+      </footer>
+    </main>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>

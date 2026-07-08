@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sights</title>
+    <link rel="stylesheet" href="css/sights.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lustria&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <!-- logo -->
+      <a href="homepage.html">
+        <div class="logo">
+          <img src="images/logo.png" alt="logo" />
+        </div>
+      </a>
+      <!-- navigation -->
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="homepage.html"><h5>Home</h5></a>
+          </li>
+          <li>
+            <a href="dining.html"><h5>Dining</h5></a>
+          </li>
+          <li>
+            <a href="sights.html"><h6>Sights</h6></a>
+          </li>
+          <li>
+            <a href="About_us.html"><h5>About</h5></a>
+          </li>
+        </ul>
+      </nav>
+      <!-- user -->
+      <div class="user">
+        <a href="Me.html">
+          <img src="images/user_icon.png" alt="user_icon" />
+        </a>
+      </div>
+    </header>
+
+    <!-- line -->
+    <div class="rec"></div>
+
+    <main>
+      <!-- title -->
+      <section class="title">
+        <h1>Explore Sights</h1>
+      </section>
+
+      <!-- Must-go Landmarks -->
+      <section class="category">
+        <div class="name">
+          <h2>Must-go Landmarks</h2>
+        </div>
+        <section class="content">
+          <button class="left_arrow" onclick="MoveLandmarks(-1)">
+            <img src="images/sights/left_arrow.png" alt="left arrow" />
+          </button>
+
+          <div class="box">
+            <div class="grid" id="Landmarks">
+              <!-- card_1 -->
+              <div class="card">
+                <img
+                  src="images/sights/jingan_temple.jpg"
+                  alt="jingan_temple.jpg"
+                />
+
+                <div class="intro">
+                  <p>
+                    Historic Buddhist temple complex comprising 3 main halls & a
+                    massive sitting jade Buddha.
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/Jing'an+Temple/@31.2235188,121.4427091,17z/data=!3m1!4b1!4m6!3m5!1s0x35b26ffe1e4a5d55:0x7a5bc6971d870842!8m2!3d31.2235188!4d121.445284!16zL20vMDRrcGNo?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>Jingan Temple</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- card_2 -->
+              <div class="card">
+                <img src="images/sights/the_bund.jpg" alt="the_bund.jpg" />
+
+                <div class="intro">
+                  <p>
+                    Historic, 1,500-meter-long waterside promenade showcasing
+                    distinctive modern & colonial buildings.
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/The+Bund/@31.2402611,121.4880021,17z/data=!3m1!4b1!4m6!3m5!1s0x35b270578b874861:0x4d56fbed10d1af64!8m2!3d31.2402611!4d121.490577!16zL20vMDJiYnpx?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>The Bund</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- card_3 -->
+              <div class="card">
+                <img
+                  src="images/sights/Shanghai_Tower.jpg"
+                  alt="Shanghai_Tower.jpg"
+                />
+
+                <div class="intro">
+                  <p>
+                    632-m. megatall skyscraper with 2 observation decks, plus
+                    restaurants, bars, shops & a hotel.
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/Shanghai+Tower/@31.2341326,121.5030163,17z/data=!4m6!3m5!1s0x35b2706a26763e71:0x352a1022bb7caa28!8m2!3d31.233518!4d121.505618!16s/m/03y4m5c?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw=="
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>Shanghai Tower</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- card_4 -->
+              <div class="card">
+                <img
+                  src="images/sights/Oriental_Pearl_Tower.jpg"
+                  alt="Oriental_Pearl_Tower.jpg"
+                />
+
+                <div class="intro">
+                  <p>
+                    Futuristic TV tower (468-meters tall) offering city vistas,
+                    a history museum & revolving restaurant.
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/Oriental+Pearl+TV+Tower/@31.2396889,121.4997553,17z/data=!3m1!4b1!4m6!3m5!1s0x35b270fb25b0d4db:0x163e9f3be2e08565!8m2!3d31.2396889!4d121.4997553!16zL20vMDI1cWw1?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>Pearl Tower</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- card_5 -->
+              <div class="card">
+                <img
+                  src="images/sights/Fairmont_Peace_Hotel.jpg"
+                  alt="Fairmont_Peace_Hotel.jpg"
+                />
+
+                <div class="intro">
+                  <p>
+                    Set among high-end shops along Nanjing Road, this plush art
+                    deco hotel dating from 1929 lies near restaurants on The
+                    Bund along Huangpu River.
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/Fairmont+Peace+Hotel/@31.2390388,121.4869624,17z/data=!3m1!4b1!4m9!3m8!1s0x35ad8b992a1dbdd3:0xa1cc582020699928!5m2!4m1!1i2!8m2!3d31.2390388!4d121.4895427!16zL20vMDYwbHA2?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw=="
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>Peace Hotel</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- card_6 -->
+              <div class="card">
+                <img
+                  src="images/sights/Jin_Mao_Tower.jpg"
+                  alt="Jin_Mao_Tower.jpg"
+                />
+
+                <div class="intro">
+                  <p>
+                    88-story, spired skyscraper offering restaurants, offices, a
+                    Grand Hyatt hotel & observation deck.
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/Jin+Mao+Tower/@31.2352515,121.5031688,17z/data=!4m15!1m8!3m7!1s0x35b270e5a0e698f3:0x3f2e83dc82e40153!2sJin+Mao+Tower!8m2!3d31.2352515!4d121.5057491!10e1!16zL20vMDI1cWp0!3m5!1s0x35b270e5a0e698f3:0x3f2e83dc82e40153!8m2!3d31.2352515!4d121.5057491!16zL20vMDI1cWp0?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>Jin Mao Tower</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- card_7 -->
+              <div class="card">
+                <img
+                  src="images/sights/Shanghai_World_Financial_Center.jpg"
+                  alt="Shanghai_World_Financial_Center.jpg"
+                />
+
+                <div class="intro">
+                  <p>
+                    China's tallest skyscraper (632 meters) with a spiraling
+                    design symbolizing "dragon ascending." The 118th-floor
+                    observation deck offers 360° views of the Huangpu River.
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/Shanghai+World+Financial+Center+Observatory/@31.234114,121.5046237,17z/data=!4m7!3m6!1s0x35b2711326bd40b3:0xaf0a38c172809b6b!4b1!8m2!3d31.234114!4d121.507204!16s/g/11nx3pztxz?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw=="
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>Financial Center</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <button class="right_arrow" onclick="MoveLandmarks(1)">
+            <img src="images/sights/right_arrow.png" alt="right arrow" />
+          </button>
+        </section>
+      </section>
+
+      <!-- Museums -->
+      <section class="category" id="museum_section">
+        <div class="name">
+          <h2>Museums</h2>
+        </div>
+        <section class="content">
+          <button class="left_arrow" onclick="MoveMuseums(-1)">
+            <img src="images/sights/left_arrow.png" alt="left arrow" />
+          </button>
+
+          <div class="box">
+            <div class="grid" id="Museums">
+              <!-- card_1 -->
+              <div class="card">
+                <img
+                  src="images/sights/Shanghai_Museum.jpg"
+                  alt="Shanghai_Museum.jpg"
+                />
+
+                <div class="intro">
+                  <p>
+                    Huge, free museum with extensive displays including bronze &
+                    jade artifacts, sculptures & paintings.
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/Shanghai+Museum/@31.2283307,121.4729475,17z/data=!3m1!4b1!4m6!3m5!1s0x35b270696d12653d:0x4d4c4e7bc3c8db6c!8m2!3d31.2283307!4d121.4755278!16zL20vMDI1cW5y?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>Shanghai Museum</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- card_2 -->
+              <div class="card">
+                <img
+                  src="images/sights/Shanghai_Postal_Museum.jpg"
+                  alt="Postal_Museum.jpg"
+                />
+
+                <div class="intro">
+                  <p>
+                    Free museum that showcases China’s postal evolution through
+                    rare stamps like the 1878 Large Dragon and Penny Black.
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/Shanghai+Postal+Museum/@31.244921,121.4828757,17z/data=!3m1!4b1!4m6!3m5!1s0x35b27053f85208fd:0x72a6c24524adee08!8m2!3d31.244921!4d121.485456!16s%2Fg%2F122wzhfn?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>Postal Museum</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- card_3 -->
+              <div class="card">
+                <img
+                  src="images/sights/World_Expo_Museum.jpg"
+                  alt="World Expo Museum.jpg"
+                />
+
+                <div class="intro">
+                  <p>
+                    Free museum dedicated to the history of expos since the
+                    Great Exhibition in London in 1851.
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/World+Expo+Museum,+%E6%96%B0%E9%BE%99%E5%8D%8E+Huang+Pu+Qu,+Shang+Hai+Shi,+China,+200023/@31.1947158,121.479278,17z/data=!3m1!4b1!4m6!3m5!1s0x35b27a8c2a51ac45:0x3c4df83dc0a4562e!8m2!3d31.1947158!4d121.4818583!16s%2Fm%2F05f55k4?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>Expo Museum</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- card_4 -->
+              <div class="card">
+                <img
+                  src="images/sights/Shanghai_Science_and_Technology_Museum.jpg"
+                  alt="Shanghai_Science_and_Technology_Museum.jpg"
+                />
+
+                <div class="intro">
+                  <p>
+                    Modern museum focusing on technology, with educational
+                    programs, multimedia exhibits & theaters.
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/Shanghai+Science+and+Technology+Museum/@31.21797,121.5384977,17z/data=!4m7!3m6!1s0x35b277332156bb01:0x6b85c568bae0a381!8m2!3d31.21797!4d121.541078!10e1!16zL20vMDdjX21m?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>Science Museum</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- card_5 -->
+              <div class="card">
+                <img
+                  src="images/sights/Shanghai_History_Museum.jpg"
+                  alt="Shanghai_History_Museum.jpg"
+                />
+
+                <div class="intro">
+                  <p>
+                    Art, artifacts, documents & photos illustrating the history
+                    of Shanghai, with rotating exhibits.
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/Shanghai+History+Museum/@31.2398,121.4971197,17z/data=!3m1!4b1!4m6!3m5!1s0x35b270fb9ce0496d:0xfb586e7a684f8a4f!8m2!3d31.2398!4d121.4997!16s%2Fm%2F0cmcn6y?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>History Museum</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <button class="right_arrow" onclick="MoveMuseums(1)">
+            <img src="images/sights/right_arrow.png" alt="right arrow" />
+          </button>
+        </section>
+      </section>
+
+      <!-- Parks -->
+      <section class="category">
+        <div class="name">
+          <h2>Parks</h2>
+        </div>
+        <section class="content">
+          <button class="left_arrow" onclick="MoveParks(-1)">
+            <img src="images/sights/left_arrow.png" alt="left arrow" />
+          </button>
+
+          <div class="box">
+            <div class="grid" id="Parks">
+              <!-- card_1 -->
+              <div class="card">
+                <img
+                  src="images/sights/Yuyuan_Garden.jpg"
+                  alt="Yuyuan_Garden.jpg"
+                />
+
+                <div class="intro">
+                  <p>
+                    5-acre garden built in 1577 that features Ming dynasty
+                    pavilions, ponds, rockeries & arched bridges
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/Yu+Garden/@31.2253491,121.4774388,15z/data=!4m10!1m2!2m1!1sYuyuan+Garden!3m6!1s0x35ad874131d9d389:0x84a0e976b888d7db!8m2!3d31.2272355!4d121.492094!15sCg1ZdXl1YW4gR2FyZGVuWg8iDXl1eXVhbiBnYXJkZW6SARBib3RhbmljYWxfZ2FyZGVuqgE1EAEyHhABIho-rACWPffXbBmGo7tGxqdvpfxUI2a5T35bkjIREAIiDXl1eXVhbiBnYXJkZW7gAQA!16zL20vMDh4Mzhr?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>Yuyuan Garden</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- card_2 -->
+              <div class="card">
+                <img
+                  src="images/sights/World_Expo_Culture_Park.jpg"
+                  alt="World_Expo_Culture_Park.jpg"
+                />
+
+                <div class="intro">
+                  <p>
+                    Vibrant space showcasing art and culture, featuring
+                    pavilions from the 2010 World Expo. It offers beautiful
+                    landscapes, exhibitions, and recreational areas for
+                    visitors.
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/World+Expo+Cultural+Park/@31.18172,121.4772697,17z/data=!4m15!1m8!3m7!1s0x35b27aee2a8f6289:0x4be2cd3528dd5c9e!2sWorld+Expo+Cultural+Park!8m2!3d31.18172!4d121.47985!10e1!16s%2Fg%2F11ptwyy49f!3m5!1s0x35b27aee2a8f6289:0x4be2cd3528dd5c9e!8m2!3d31.18172!4d121.47985!16s%2Fg%2F11ptwyy49f?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>Culture Park</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- card_3 -->
+              <div class="card" id="Plum_Blossom">
+                <img
+                  src="images/sights/Plum_Blossom_Garden.jpg"
+                  alt="Plum_Blossom_Garden.jpg"
+                />
+
+                <div class="intro">
+                  <p>
+                    Beautiful garden known for its stunning plum blossoms. It
+                    features serene landscapes, walking paths, and cultural
+                    activities.
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/Plum+Blossom+Garden/@30.8879,121.1156697,17z/data=!4m15!1m8!3m7!1s0x35b2e8d140f727c1:0xa0b768ecd91bcbb!2sPlum+Blossom+Garden!8m2!3d30.8879!4d121.11825!10e1!16s%2Fm%2F0k9rxcn!3m5!1s0x35b2e8d140f727c1:0xa0b768ecd91bcbb!8m2!3d30.8879!4d121.11825!16s%2Fm%2F0k9rxcn?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>Plum Blossom</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- card_4 -->
+              <div class="card">
+                <img
+                  src="images/sights/Gongqing_Forest_Park.jpg"
+                  alt="Gongqing_Forest_Park.jpg"
+                />
+
+                <div class="intro">
+                  <p>
+                    Sprawling urban park with picnic & BBQ facilities, plus a
+                    kids' playground & boat rentals
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/Gongqing+Forest+Park/@31.3175272,121.545872,16.77z/data=!4m7!3m6!1s0x35b2748f241170e1:0x48252435cfe27c63!8m2!3d31.317729!4d121.5486863!10e1!16s%2Fm%2F027tq9m?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>Gongqing Forest</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- card_5 -->
+              <div class="card">
+                <img
+                  src="images/sights/Guyi_Garden.jpg"
+                  alt="Guyi_Garden.jpg"
+                />
+
+                <div class="intro">
+                  <p>
+                    Classically designed 16th-century garden with pavilions,
+                    shrines, shops, taverns & restaurants.
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/Guyi+Garden/@31.291482,121.3140597,17z/data=!4m7!3m6!1s0x35b268fc79f448d7:0x4c744da2492b2a1f!8m2!3d31.291482!4d121.31664!10e1!16s%2Fm%2F09rv0c3?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>Guyi Garden</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <button class="right_arrow" onclick="MoveParks(1)">
+            <img src="images/sights/right_arrow.png" alt="right arrow" />
+          </button>
+        </section>
+      </section>
+
+      <!-- blocks -->
+      <section class="category">
+        <div class="name">
+          <h2>Blocks</h2>
+        </div>
+        <section class="content">
+          <button class="left_arrow" onclick="MoveBlocks(-1)">
+            <img src="images/sights/left_arrow.png" alt="left arrow" />
+          </button>
+
+          <div class="box">
+            <div class="grid" id="Blocks">
+              <!-- card_1 -->
+              <div class="card">
+                <img
+                  src="images/sights/Wukang_Road.jpg"
+                  alt="Wukang_Road.jpg"
+                />
+
+                <div class="intro">
+                  <p>
+                    Historic street lined with charming European-style villas,
+                    features quaint cafes, boutique shops, offering a
+                    picturesque blend of culture and leisurely exploration.
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/Wu+Kang+Lu,+Xu+Hui+Qu,+Shang+Hai+Shi,+China,+200031/@31.20844,121.4378197,17z/data=!3m1!4b1!4m6!3m5!1s0x35b2654e70ad8995:0xb047ec6e58ea666f!8m2!3d31.20844!4d121.4404!16s%2Fm%2F0y69cs3?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>Wukang Road</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- card_2 -->
+              <div class="card">
+                <img src="images/sights/Yuyuan_Road.jpg" alt="Yuyuan Road" />
+
+                <div class="intro">
+                  <p>
+                    Scenic boulevard adorned with elegant old villas and lush
+                    greenery, providing a delightful atmosphere for leisurely
+                    strolls and cultural experiences.
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/Yu+Yuan+Lu,+Shang+Hai+Shi,+China/@31.22062,121.4325897,17z/data=!3m1!4b1!4m6!3m5!1s0x35b26557fdc888ff:0x7d7c205c52a226f2!8m2!3d31.22062!4d121.43517!16s%2Fg%2F155qb1n5?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>Yuyuan Road</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- card_3 -->
+              <div class="card">
+                <img src="images/sights/Nanjing_Road.jpg" alt="Nanjing Road" />
+
+                <div class="intro">
+                  <p>
+                    Bustling commercial street, featured vibrant shops, offering
+                    a lively atmosphere for shopping and cultural exploration in
+                    Shanghai's heart.
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/Nan+Jing+Lu+Bu+Xing+Jie,+Huang+Pu+Qu,+Shang+Hai+Shi,+China/@31.23575,121.4771397,17z/data=!3m1!4b1!4m6!3m5!1s0x35b27044ac5f2ec5:0xe3baec7b0c4cb66a!8m2!3d31.23575!4d121.47972!16zL20vMDVzbDdq?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>Nanjing Road</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- card_4 -->
+              <div class="card">
+                <img src="images/sights/Anfu_Road.jpg" alt="Anfu Road" />
+
+                <div class="intro">
+                  <p>
+                    Charming lane lined with historic villas and art spaces,
+                    creating an inviting atmosphere for leisurely walks and
+                    cultural discovery in Shanghai.
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/An+Fu+Lu,+Xu+Hui+Qu,+Shang+Hai+Shi,+China,+200031/@31.21415,121.4417797,17z/data=!3m1!4b1!4m6!3m5!1s0x35b265535e442ff1:0x1e46760d27220ea3!8m2!3d31.21415!4d121.44436!16s%2Fg%2F1tfr_1lv?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>Anfu Road</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- card_5 -->
+              <div class="card">
+                <img src="images/sights/Fumin_Road.jpg" alt="Fumin_Road.jpg" />
+
+                <div class="intro">
+                  <p>
+                    Quaint street graced with tree-lined walkways, features
+                    local eateries, artisan shops, and vibrant street art.
+                  </p>
+                </div>
+                <button class="star" onclick="toggleStar(this)">
+                  <img src="images/star.png" alt="star icon" />
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/place/Fumin+Road/@31.217133,121.4496887,17z/data=!3m1!4b1!4m6!3m5!1s0x35b27aa9e3978a8f:0x5d196156871651cd!8m2!3d31.217133!4d121.452269!16s%2Fg%2F11cm1j_4w6?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                >
+                  <div class="info">
+                    <h3>Fumin Road</h3>
+
+                    <div class="google">
+                      <img src="images/google.png" alt="google_icon" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <button class="right_arrow" onclick="MoveBlocks(1)">
+            <img src="images/sights/right_arrow.png" alt="right arrow" />
+          </button>
+        </section>
+      </section>
+    </main>
+
+    <script src="js/sights.js"></script>
+  </body>
+</html>

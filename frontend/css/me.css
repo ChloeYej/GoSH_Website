@@ -1,0 +1,446 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 2.3em;
+  font-family: "Poppins", serif;
+}
+
+h2 {
+  font-size: 2em;
+  font-family: "Poppins", serif;
+}
+
+h3 {
+  font-size: 1.4em;
+  font-family: "Plus Jakarta Sans", serif;
+  font-weight: 500;
+  color: rgb(255, 228, 196);
+}
+
+h4 {
+  font-size: 1.3em;
+  font-family: "Plus Jakarta Sans", serif;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  height: 70px;
+  margin: 30px auto;
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  width: 200px;
+  height: 80px;
+}
+
+.logo img {
+  height: 90%;
+}
+
+.nav {
+  margin-left: 0 auto;
+}
+.nav ul {
+  display: flex;
+}
+.nav ul li {
+  list-style: none;
+  margin: 0 30px;
+}
+
+.nav ul li a {
+  display: block;
+  margin-top: 10px;
+  height: 50px;
+  padding: 0 20px;
+  line-height: 50px;
+}
+
+.nav ul li a:hover {
+  border-bottom: 1px solid #ffffff;
+  color: bisque;
+}
+
+.user {
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.user a img {
+  height: 80%;
+  margin-top: 5px;
+}
+
+.rec {
+  border-bottom: 7px solid #ffffff;
+}
+
+.mainsection {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+}
+
+.left {
+  width: 28%;
+  height: 100%;
+  background-color: rgb(51, 51, 51);
+  text-align: center;
+  padding: 20px;
+  padding-top: 7vh;
+}
+.me_info {
+  padding: 15px auto;
+  /* background-color: #410606; */
+}
+
+.me_info img {
+  width: 40%;
+}
+
+.buttons {
+  padding-top: 8vh;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  /* gap: 4vh; */
+  align-items: center;
+  justify-content: center;
+  /* background-color: #f2cbcb; */
+}
+
+.sub_nav {
+  /* background-color: #b90a0a; */
+  flex: 1;
+  padding: 20px;
+}
+
+.sub_nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+.selected {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.selected img {
+  width: 30px;
+}
+
+.right {
+  width: 72%;
+  /* background-color: #932525; */
+}
+
+.liked {
+  /* background-color: #058038; */
+  height: 82.5vh;
+  overflow: hidden;
+}
+
+.title {
+  padding: 30px;
+  padding-left: 50px;
+}
+
+.cards {
+  display: grid;
+  height: 83%;
+  padding-left: 30px;
+  grid-template-columns: repeat(3, 30%);
+  gap: 30px;
+  overflow-y: auto;
+  /* background-color: #13581f; */
+}
+
+.card {
+  position: relative;
+  height: 25vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 25px;
+  overflow: hidden;
+  text-align: center;
+  border: 2px solid #ffffff;
+}
+
+.card img {
+  background-color: #222;
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.star {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 5;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.star img {
+  width: 30px;
+  height: auto;
+}
+
+.star img:hover {
+  transform: scale(1.2);
+}
+
+.info {
+  padding: 0rem 1.5rem;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* info of food */
+.info h4 {
+  font-size: 1.2em;
+}
+
+.info h4:hover {
+  color: rgb(255, 228, 196);
+  transform: scale(1.15);
+}
+
+/* info of sights */
+.info h3 {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 1.3em;
+}
+
+.info h3:hover {
+  color: rgb(255, 228, 196);
+  transform: scale(1.15);
+}
+
+.detail {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.price {
+  text-align: center;
+}
+
+.google img {
+  width: 20px;
+  height: auto;
+}
+
+.content button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 1500px) {
+  h5 {
+    font-size: 1em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .header {
+    gap: 10px;
+    margin: 15px auto;
+  }
+
+  .nav ul li {
+    margin: 0 15px;
+  }
+  .cards {
+    height: 72%;
+  }
+
+  /* .card {
+    height: 220px;
+  } */
+}
+
+@media only screen and (max-width: 500px) {
+  h5 {
+    font-size: 0.5em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  h4 {
+    font-size: 0.8em;
+  }
+  .info h4 {
+    font-size: 0.7em;
+  }
+
+  .info h3 {
+    font-size: 0.8em;
+  }
+
+  .header {
+    height: 50px;
+    margin: 10px auto;
+    width: 95%;
+    gap: 5px;
+    /* background-color: #d57f7f; */
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .nav ul li {
+    margin: 0 0;
+  }
+  .user {
+    margin-left: 10px;
+  }
+
+  .user a img {
+    height: 60%;
+  }
+
+  .mainsection {
+    display: block;
+  }
+
+  .left {
+    width: 100%;
+    height: 8%;
+    padding: 5px;
+  }
+
+  .me_info {
+    display: none;
+  }
+
+  .buttons {
+    height: 100%;
+    flex-direction: row;
+    padding-top: 0vh;
+    /* background-color: #380b0b; */
+  }
+
+  .sub_nav {
+    margin-bottom: 0px;
+  }
+
+  .sub_nav button {
+    font-size: 0.8em;
+  }
+
+  .selected {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+  }
+
+  .selected img {
+    width: 15px;
+  }
+
+  .right {
+    width: 100%;
+    /* background-color: #932525; */
+  }
+
+  .liked {
+    height: 95vh;
+    /* background-color: #6e3737; */
+  }
+
+  .title {
+    display: none;
+  }
+
+  .cards {
+    height: 80%;
+    margin: 20px;
+    padding-left: 0px;
+    gap: 17px;
+    /* background-color: #13581f; */
+  }
+
+  .card {
+    height: 180px;
+  }
+
+  .card img {
+    height: 70%;
+  }
+
+  .star img {
+    width: 20px;
+  }
+
+  .info {
+    gap: 1px;
+    padding: 0.5rem 0.5rem;
+    /* background-color: #3a0808; */
+  }
+
+  .google img {
+    width: 15px;
+    height: auto;
+    padding-right: 3px;
+  }
+}

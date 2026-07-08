@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dining</title>
+    <link rel="stylesheet" href="css/dining.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lustria&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <!-- logo -->
+      <a href="homepage.html">
+        <div class="logo">
+          <img src="images/logo.png" alt="logo" />
+        </div>
+      </a>
+      <!-- navigation -->
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="homepage.html"><h5>Home</h5></a>
+          </li>
+          <li>
+            <a href="dining.html"><h6>Dining</h6></a>
+          </li>
+          <li>
+            <a href="sights.html"><h5>Sights</h5></a>
+          </li>
+          <li>
+            <a href="About_us.html"><h5>About</h5></a>
+          </li>
+        </ul>
+      </nav>
+      <!-- user -->
+      <div class="user">
+        <a href="Me.html">
+          <img src="images/user_icon.png" alt="user_icon" />
+        </a>
+      </div>
+    </header>
+
+    <!-- line -->
+    <div class="rec"></div>
+
+    <!-- categories -->
+    <main class="main_part">
+      <section class="categories">
+        <form class="dropdown">
+          <select onchange="GetCategory(this)">
+            <option value="1" selected>Restaurants</option>
+            <option value="2">Local Must-try</option>
+            <option value="3">Cafes & dessert</option>
+          </select>
+        </form>
+      </section>
+
+      <!-- restaurants -->
+      <section class="restaurants">
+        <!-- category_1 -->
+        <section class="category" id="1" style="display: grid">
+          <!-- card_1 -->
+          <div class="card">
+            <img
+              src="images/dining/Renhe_Restaurant.jpg"
+              alt="Renhe_Restaurant.jpg"
+            />
+
+            <div class="intro">
+              <p>
+                Elegant dining establishment, featuring dishes like crab roe
+                noodles and tangerine peel chicken.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.google.com/maps/place/%E4%BA%BA%E5%92%8C%E9%A6%86/@31.1584971,121.2401553,12z/data=!4m15!1m8!3m7!1s0x35b27aba6c9eb79f:0x5c814213172a98c0!2z5Lq65ZKM6aaG!8m2!3d31.201739!4d121.458096!10e1!16s%2Fg%2F11b6vs9vv4!3m5!1s0x35b27aba6c9eb79f:0x5c814213172a98c0!8m2!3d31.201739!4d121.458096!16s%2Fg%2F11b6vs9vv4?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>Renhe</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- card_2 -->
+          <div class="card">
+            <img
+              src="images/dining/Meigui_Ting_Shanghai Cai.jpg"
+              alt="Meigui Ting"
+            />
+
+            <div class="intro">
+              <p>
+                Stylish restaurant, focuses on exquisite Shanghai cuisine,
+                featuring signature dishes like sweet and tender beef.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.google.com/maps/place/Meigui+Ting+Shanghai+Cai+(Xingguo+Rd+Branch)/@31.20509,121.4347597,17z/data=!4m15!1m8!3m7!1s0x35b2654926bddd2d:0xa6a55287147710ed!2sMeigui+Ting+Shanghai+Cai+(Xingguo+Rd+Branch)!8m2!3d31.20509!4d121.43734!10e1!16s%2Fg%2F11rv7tgnss!3m5!1s0x35b2654926bddd2d:0xa6a55287147710ed!8m2!3d31.20509!4d121.43734!16s%2Fg%2F11rv7tgnss?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>Meigui Ting</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- card_3 -->
+          <div class="card" id="Alimentari">
+            <img
+              src="images/dining/Alimentari_Grande.jpg"
+              alt="Alimentari Grande"
+            />
+
+            <div class="intro">
+              <p>
+                Charming Italian restaurant, offers a menu of authentic dishes,
+                featuring handmade pasta and fresh ingredients.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.bing.com/maps?cp=31.216105%7E121.45493&lvl=16.0&setlang=en"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>Alimentari</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- card_4 -->
+          <div class="card">
+            <img
+              src="images/dining/Guangfulin_Prime_Hotel.jpg"
+              alt="Guangfulin"
+            />
+
+            <div class="intro">
+              <p>Upscale dining venue sets in a sophisticated atmosphere.</p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.bing.com/maps?cp=31.058338%7E121.196043&lvl=16.0&setlang=en"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>Guangfulin</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- 5 -->
+          <div class="card">
+            <img
+              src="images/dining/Latina_Brazilian_Steakhouse.jpg"
+              alt="Latina_Brazilian_Steakhouse"
+            />
+
+            <div class="intro">
+              <p>
+                Vibrant eatery, specializes in authentic Brazilian barbecue,
+                offering a variety of grilled meats served in traditional style.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.bing.com/maps?cp=31.235408%7E121.500871&lvl=16.0&setlang=en"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>Latina</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- 6 -->
+          <div class="card">
+            <img src="images/dining/Bisro_Lenbach.jpg" alt="Bisro_Lenbach" />
+
+            <div class="intro">
+              <p>
+                A cozy Western restaurant, offers a menu of classic European
+                dishes, featuring fresh ingredients and a warm ambiance.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.bing.com/maps?cp=31.22049%7E121.450596&lvl=16.0&setlang=en"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>Lenbach</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- 7 -->
+          <div class="card">
+            <img
+              src="images/dining/Ji_Pin_Xiao_Xian.jpg"
+              alt="Ji_Pin_Xiao_Xian.jpg"
+            />
+
+            <div class="intro">
+              <p>
+                Refined Jiangsu-Zhejiang cuisine restaurant, features a
+                selection of traditional dishes.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.google.com/maps/place/Ji+Pin+Xiao+Xian/@31.22211,121.4410597,17z/data=!4m15!1m8!3m7!1s0x35b26fffb253857b:0x1b27f869f9fb40e2!2sJi+Pin+Xiao+Xian!8m2!3d31.22211!4d121.44364!10e1!16s%2Fg%2F11rv3lhwks!3m5!1s0x35b26fffb253857b:0x1b27f869f9fb40e2!8m2!3d31.22211!4d121.44364!16s%2Fg%2F11rv3lhwks?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>Jhouse</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- 8 -->
+          <div class="card">
+            <img src="images/dining/Xiaoyeshu.jpg" alt="Xiaoyeshu" />
+
+            <div class="intro">
+              <p>
+                Shanghai cuisine restaurant, specializes in traditional dishes,
+                featuring items like three-yellow chicken.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.google.com/maps/place/Xiaoyeshu/@31.02091,121.2585097,17z/data=!3m1!4b1!4m6!3m5!1s0x35b2f35567b8a475:0x98a47da5f2c72e98!8m2!3d31.02091!4d121.26109!16s%2Fg%2F11q430hd35?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>Xiaoyeshu</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- 9 -->
+          <div class="card" style="display: none">
+            <img
+              src="images/dining/Texas_Roadhouse.jpg"
+              alt="Texas_Roadhouse.jpg"
+            />
+
+            <div class="intro">
+              <p>
+                Lively Western steakhouse, offers a menu filled with hearty
+                dishes, including hand-cut steaks and freshly baked bread.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.google.com/maps/place/Texas+Roadhouse/@31.22864,121.5236297,17z/data=!3m1!4b1!4m6!3m5!1s0x35b270d004ddef49:0x88d18af9c8f613c2!8m2!3d31.22864!4d121.52621!16s%2Fg%2F11swvqb239?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>Texas</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- 10 -->
+          <div class="card" style="display: none">
+            <img src="images/dining/Zhoushe.jpg" alt="Zhoushe" />
+
+            <div class="intro">
+              <p>
+                Distinguished restaurant specializing in local Benbang cuisine,
+                features signature dishes like smoked fish.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.google.com/maps/place/Zhoushe/@31.1951134,121.3082592,17z/data=!3m1!4b1!4m6!3m5!1s0x35b266e05df3c7b5:0x215ae440f45c845d!8m2!3d31.1951134!4d121.3108395!16s%2Fg%2F11q48n2xdl?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>Zhoushe</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- category_2 -->
+        <section class="category" id="2" style="display: none">
+          <!-- card_1 -->
+          <div class="card">
+            <img
+              src="images/dining/Lao_Long_Tang.jpg"
+              alt="Lao_Long_Tang.jpg"
+            />
+
+            <div class="intro">
+              <p>
+                Lao Long Tang offers authentic Shanghai-style soup and noodles,
+                known for its rich flavors and comforting atmosphere.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.google.com/maps/place/Lao+Long+Tang/@31.20692,121.4210697,17z/data=!4m15!1m8!3m7!1s0x35b265403252db4b:0x1e58cc7ea27a9c04!2sLao+Long+Tang!8m2!3d31.20692!4d121.42365!10e1!16s%2Fg%2F11rv37l11b!3m5!1s0x35b265403252db4b:0x1e58cc7ea27a9c04!8m2!3d31.20692!4d121.42365!16s%2Fg%2F11rv37l11b?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>Lao Long Tan</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- card_2 -->
+          <div class="card">
+            <img
+              src="images/dining/Fuhe_Noodle_Restaurant.jpg"
+              alt="Fuhe_Noodle_Restaurant.jpg"
+            />
+
+            <div class="intro">
+              <p>
+                Fuhe Noodle Restaurant specializes in handmade noodles, serving
+                delicious broths and unique toppings in a cozy setting.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.google.com/maps/place/Fuhe+Noodle+Restaurant/@31.2475699,121.4864744,17z/data=!3m1!4b1!4m6!3m5!1s0x35b270fff8a6a7a7:0xab3a59577449bd57!8m2!3d31.24757!4d121.49134!16s%2Fg%2F11swxtk5vc?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>Fuhe Noodle</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- card_3 -->
+          <div class="card">
+            <img src="images/dining/Wanshouzhai.jpg" alt="Wanshouzhai" />
+
+            <div class="intro">
+              <p>
+                Wanshouzhai features traditional Shanghai cuisine, highlighting
+                seasonal ingredients and classic dishes.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.google.com/maps/place/Wanshouzhai/@31.2658425,121.4822545,17z/data=!3m1!4b1!4m6!3m5!1s0x35b271a3efee7857:0x2545ab7e058edbbf!8m2!3d31.2658425!4d121.4848348!16s%2Fg%2F1tlzy58q?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>Wanshouzhai</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- card_4 -->
+          <div class="card">
+            <img src="images/dining/Dalong_Baozi.jpg" alt="Dalong Baozi" />
+
+            <div class="intro">
+              <p>
+                Dalong Baozi is famous for its steamed buns, offering a variety
+                of fillings that capture authentic Shanghai flavors.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.google.com/maps/place/Dalong+Baozi+Stuffed+With+Juicy+Pork/@31.24864,121.4817297,17z/data=!3m1!4b1!4m6!3m5!1s0x35b270534039d009:0x87aba70ab5f410b0!8m2!3d31.24864!4d121.48431!16s%2Fg%2F11q49k7bsp?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>Dalong Baozi</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- 5 -->
+          <div class="card">
+            <img src="images/dining/Chizaiji.png" alt="Chizaiji" />
+
+            <div class="intro">
+              <p>
+                Hong Kong Chizaiji specializes in steamed vermicelli rolls,
+                presenting fresh ingredients and rich sauces.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.google.com/maps/place/Hong+Kong+Chizaiji+Steamed+Vermicelli+Roll+Wang/@31.2137612,121.4543442,17z/data=!3m1!4b1!4m6!3m5!1s0x35b27aa87f6c048b:0x5397f88f36f0e85f!8m2!3d31.2137612!4d121.4569245!16s%2Fg%2F11cm1lqsb2?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>Chizaiji</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- 6 -->
+          <div class="card">
+            <img src="images/dining/Longhua _Suzhai.jpg" alt="Longhua Suzhai" />
+
+            <div class="intro">
+              <p>
+                Longhua Suzhai offers a variety of vegetarian dishes, focusing
+                on fresh produce and creative flavors.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.google.com/maps/place/Longhua+Suzhai+Longhua+Road+Shop/@31.1745273,121.4498159,17z/data=!3m1!4b1!4m6!3m5!1s0x35b27b2993e72ec9:0xa495677dde0dee56!8m2!3d31.1745273!4d121.4523962!16s%2Fg%2F1td45zzd?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>Longhua Suzhai</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- Cafe&dessert -->
+        <section class="category" id="3" style="display: none">
+          <!-- card_1 -->
+          <div class="card">
+            <img src="images/dining/BAsdBAN.jpg" alt="BAsdBAN" />
+
+            <div class="intro">
+              <p>
+                BAsdBAN offers delectable desserts and artisanal pastries,
+                creating a delightful experience in a cozy, inviting atmosphere.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.google.com/maps/place/BAs+d+BAN/@31.2215469,121.4359496,17z/data=!3m1!4b1!4m6!3m5!1s0x35b26f44e7705b19:0x4b6f696bbd2ab0f6!8m2!3d31.2215469!4d121.4385299!16s%2Fg%2F11k5gbn43j?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>BAsdBAN</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- card_2 -->
+          <div class="card">
+            <img src="images/dining/O.P.S_CAFE.jpg" alt="O.P.S" />
+
+            <div class="intro">
+              <p>
+                O.P.S CAFE serves specialty coffee and unique desserts, perfect
+                for relaxed gatherings in a stylish and contemporary setting.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.google.com/maps/place/Ops+Cafe/@31.205765,121.4526315,16.77z/data=!4m6!3m5!1s0x35b27ab023356755:0xfae85df354758ba3!8m2!3d31.20561!4d121.45535!16s%2Fg%2F11q47w63v2?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>O.P.S</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- card_3 -->
+          <div class="card">
+            <img
+              src="images/dining/O'Mills_Sourdough_Bakery&Bistro.jpg"
+              alt="O'Mills"
+            />
+
+            <div class="intro">
+              <p>
+                O'Mills combines freshly baked sourdough with delightful
+                pastries and quality coffee, providing a warm.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.google.com/maps/place/O'Mills+Bakery+%26+Bistro/@31.2473352,121.2623183,11z/data=!4m10!1m2!2m1!1sbakery!3m6!1s0x35b27b848f9ce6a9:0x5acf31d93d145c48!8m2!3d31.208732!4d121.4572962!15sCgZiYWtlcnlaCCIGYmFrZXJ5kgEGYmFrZXJ5qgFGCgovbS8wMnd2NnRoEAEqCiIGYmFrZXJ5KAAyHhABIhqaBmm5R8GpFEMt3lXhWOJN7OTI5uplKV3YQDIKEAIiBmJha2VyeeABAA!16s%2Fg%2F11h_vmg11_?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>O'Mills</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- card_4 -->
+          <div class="card">
+            <img
+              src="images/dining/Starbucks_Reserve_Roastery.jpg"
+              alt="Starbucks"
+            />
+
+            <div class="intro">
+              <p>
+                Starbucks Reserve Roastery features premium coffee selections
+                and exclusive pastries.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.google.com/maps/place/Starbucks+Reserve+Roastery+%E6%98%9F%E5%B7%B4%E5%85%8B%E8%87%BB%E9%80%89%E4%B8%8A%E6%B5%B7%E7%83%98%E7%84%99%E5%B7%A5%E5%9D%8A/@31.2305679,121.4588231,17z/data=!4m7!3m6!1s0x35b27174e1030f39:0x1c18c669c783e5d8!8m2!3d31.2305679!4d121.4614034!10e1!16s%2Fg%2F11gxx687ry?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>Starbucks</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- 5 -->
+          <div class="card">
+            <img src="images/dining/WMIX_BAKERY.jpg" alt="WMIX" />
+
+            <div class="intro">
+              <p>
+                WMIX BAKERY is renowned for its artisanal breads and exquisite
+                desserts, perfect for satisfying sweet cravings.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.bing.com/maps?cp=31.237738%7E121.447849&lvl=16.0&setlang=en"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>WMIX</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- 6 -->
+          <div class="card">
+            <img src="images/dining/Shanghailander.jpg" alt="lander" />
+
+            <div class="intro">
+              <p>
+                Shanghailander specializes in creative desserts and specialty
+                coffees, providing a cozy atmosphere.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.bing.com/maps?cp=31.206762%7E121.441501&lvl=15.3"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>lander</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- 7 -->
+          <div class="card">
+            <img src="images/dining/Luneurs.jpg" alt="Luneurs" />
+
+            <div class="intro">
+              <p>
+                Luneurs offers elegant pastries and desserts, focusing on
+                seasonal flavors in a chic, modern café setting.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.google.com/maps/place/Luneurs/@31.2129382,121.4361463,17z/data=!3m1!4b1!4m6!3m5!1s0x35b265a714527927:0xe6aa2c2942310a29!8m2!3d31.2129382!4d121.4387266!16s%2Fg%2F11h4ppxygl?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>Luneurs</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- 8 -->
+          <div class="card">
+            <img src="images/dining/Sweetbox_Dessert.jpg" alt="Sweetbox" />
+
+            <div class="intro">
+              <p>
+                Sweetbox Dessert features a variety of innovative sweets and
+                desserts, creating a vibrant atmosphere for dessert lovers.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.google.com/maps/place/Xiaofangkuai+Dessert/@31.22623,121.4388797,17z/data=!3m1!4b1!4m6!3m5!1s0x35b26ffc3d0fa30f:0x48c587a09e3611d0!8m2!3d31.22623!4d121.44146!16s%2Fg%2F11q491yvr7?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>Sweetbox</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- 9 -->
+          <div class="card" style="display: none">
+            <img src="images/dining/Lillian_Cake_Shop.jpg" alt="Lillian" />
+
+            <div class="intro">
+              <p>
+                Lillian Cake Shop is known for its beautifully crafted cakes and
+                pastries, perfect for celebrations or a sweet treat any day.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.google.com/maps/place/Lillian+Cake+Shop/@31.2349037,121.4710669,17z/data=!4m15!1m8!3m7!1s0x35b270417ec0dad3:0x70e9143427d699c6!2sLillian+Cake+Shop!8m2!3d31.2349037!4d121.4736472!10e1!16s%2Fg%2F1tj71lkz!3m5!1s0x35b270417ec0dad3:0x70e9143427d699c6!8m2!3d31.2349037!4d121.4736472!16s%2Fg%2F1tj71lkz?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>Lillian</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- 10 -->
+          <div class="card" style="display: none">
+            <img src="images/dining/T12_Lab.jpg" alt="T12" />
+
+            <div class="intro">
+              <p>
+                T12 Lab combines unique dessert creations with specialty coffee,
+                offering a trendy space for dessert enthusiasts to explore new
+                flavors.
+              </p>
+            </div>
+
+            <button class="star" onclick="toggleStar(this)">
+              <img src="images/star.png" alt="star icon" />
+            </button>
+
+            <a
+              href="https://www.google.com/maps/place/T12+:+Lab/@31.20622,121.4393697,17z/data=!3m1!4b1!4m6!3m5!1s0x35b2654c431789d1:0x589b02bd7b480c55!8m2!3d31.20622!4d121.44195!16s%2Fg%2F11q47lc4ws?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+            >
+              <div class="info">
+                <h3>T12</h3>
+                <div class="detail">
+                  <div class="price">
+                    <span><h4>$40-60</h4></span>
+                    <span><h4>★★★★★</h4></span>
+                  </div>
+                  <div class="google">
+                    <img src="images/google.png" alt="google_icon" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+      </section>
+
+      <div class="NextPage">
+        <button class="arrow" id="prev" onclick="LastPage()">
+          <img src="images/dining/left_page.png" alt="left arrow" />
+        </button>
+
+        <button class="arrow" id="next" onclick="NextPage()">
+          <img src="images/dining/right_page.png" alt="right arrow" />
+        </button>
+      </div>
+    </main>
+
+    
+    <script src="js/dining.js?v=20251012"></script>
+
+  </body>
+</html>
