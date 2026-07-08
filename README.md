@@ -72,22 +72,6 @@ http://127.0.0.1:5000/
 
 The backend listens on port `5000` by default. You can override it with the `PORT` environment variable. The SQLite database defaults to `backend/tour.db`; you can override it with `SQLITE_PATH`.
 
-### API Overview
-
-| Method | Endpoint | Description |
-| --- | --- | --- |
-| GET | `/api/health` | Health check |
-| POST | `/api/signup` | Create a user account |
-| POST | `/api/login` | Log in with username and password |
-| GET | `/api/favorites?username=<name>&type=<food|sight>` | List favorites |
-| POST | `/api/favorites` | Add a favorite item |
-| DELETE | `/api/favorites` | Remove a favorite item |
-
-### Notes
-
-- The login token is a demo token stored in `localStorage`; it is suitable for coursework/demo use, not production authentication.
-- Some frontend resources load from CDNs, including Google Fonts and Leaflet/OpenStreetMap assets, so an internet connection improves the full experience.
-- Map markers depend on coordinates that can be extracted from the saved place links.
 
 ---
 
@@ -163,19 +147,6 @@ http://127.0.0.1:5000/
 
 后端默认监听 `5000` 端口，可通过 `PORT` 环境变量修改。SQLite 数据库默认使用 `backend/tour.db`，也可通过 `SQLITE_PATH` 环境变量指定其他路径。
 
-### API 简介
 
-| 方法 | 接口 | 说明 |
-| --- | --- | --- |
-| GET | `/api/health` | 健康检查 |
-| POST | `/api/signup` | 创建用户账号 |
-| POST | `/api/login` | 使用用户名和密码登录 |
-| GET | `/api/favorites?username=<name>&type=<food|sight>` | 获取收藏列表 |
-| POST | `/api/favorites` | 添加收藏 |
-| DELETE | `/api/favorites` | 删除收藏 |
 
-### 说明
 
-- 当前登录 token 为演示用途，存储在 `localStorage` 中，适合课程作业或项目展示，不适合作为生产环境认证方案。
-- 部分前端资源依赖 CDN，例如 Google Fonts、Leaflet 和 OpenStreetMap 相关资源，联网时体验更完整。
-- 地图标记依赖收藏项链接中可解析出的经纬度坐标。
